@@ -1,0 +1,67 @@
+{
+  "Products": [
+    {
+      "id": "7a45",
+      "productImage": "./images/tcb for hair.jpeg",
+      "productName": "tcb relaxer",
+      "productPrice": "250 ksh",
+      "productDescription": "Relaxing hair"
+    },
+    {
+      "id": "bed9",
+      "productImage": "./images/face-lightenind cream.jpg",
+      "productName": "Brightening Cream",
+      "productPrice": "1600 Ksh",
+      "productDescription": "Lighten up plus Active Skin."
+    },
+    {
+      "id": "35d5",
+      "productImage": "./images/tcb for hair.jpeg",
+      "productName": "tcb relaxer",
+      "productPrice": "250 ksh",
+      "productDescription": "Relaxing hair"
+    },
+    {
+      "id": "d0eb",
+      "productImage": "./images/Makari Multi cream.jpg.webp",
+      "productName": "Makari Cream",
+      "productPrice": "1400 Ksh",
+      "productDescription": "Makari multi-action lightening cream is a hydrating SPF moisturizer that replenishes dry skin with a skin-silkening blend of botanicals that softens."
+    },
+    {
+      "id": "7bb0",
+      "productImage": "./images/Makari Multi cream.jpg.webp",
+      "productName": "Makari Cream",
+      "productPrice": "1400 Ksh",
+      "productDescription": "Makari multi-action lightening cream is a hydrating SPF moisturizer that replenishes dry skin with a skin-silkening blend of botanicals that softens."
+    },
+    {
+      "id": "bd63",
+      "productImage": "./images/nails.jpg",
+      "productName": "Nail polish",
+      "productPrice": "100 Ksh",
+      "productDescription": "New nails, new you."
+    },
+    {
+      "id": "6067",
+      "productImage": "./images/face-lightenind cream.jpg",
+      "productName": "Brightening Cream",
+      "productPrice": "1500 Ksh",
+      "productDescription": "Lighten up plus Active Skin."
+    },
+    {
+      "id": "2fec",
+      "productImage": "./images/pedicure.jpg",
+      "productName": "pedicure drill",
+      "productPrice": "2000 ksh",
+      "productDescription": "Remove all dirt"
+    },
+    {
+      "id": "be2c",
+      "productImage": "./images/tcb for hair.jpeg",
+      "productName": "tcb relaxer",
+      "productPrice": "255 ksh",
+      "productDescription": "Relaxing hair"
+    }
+  ]
+}
