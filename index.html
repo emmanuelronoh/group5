@@ -35,6 +35,11 @@
                 </ul>
             </div>
         </nav>
+        <select class="form-select" id="price-filter" aria-label="Filter by price" onchange="filterByPrice()">
+            <option value="" selected>Filter </option>
+            <option value="low-high">Low to High</option>
+            <option value="high-low">High to Low</option>
+        </select>
         <input type="text" name="search" id="search" placeholder="Search Here">
         <button>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">

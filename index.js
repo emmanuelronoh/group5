@@ -60,8 +60,14 @@ function viewProduct(productName) {
                     </div>
                     <div class="col-md-6">
                         <h2>${product.productName}</h2>
-                        <p>${product.productPrice}</p>
+                        <p>$${product.productPrice}</p>
                         <p>${product.productDescription}</p>
+                        <div class="rating">
+                            ${[1, 2, 3, 4, 5].map(rating => `
+                                <input type="radio" name="rating-${product.id}" value="${rating}" ${product.rating === rating ? 'checked' : ''} onclick="rateProduct('${product.id}', ${rating})">
+                                <label>${rating}</label>
+                            `).join(' ')}
+                        </div>
                         <button class="btn btn-secondary" onclick="showSection('products-section')">Back to Products</button>
                         <button class="btn btn-success" onclick="buyProduct('${product.id}')">Buy Product</button>
                     </div>
@@ -71,6 +77,7 @@ function viewProduct(productName) {
         })
         .catch(error => console.error('Error viewing product:', error));
 }
+
 
 function editProduct(productName) {
     fetch('http://localhost:3000/Products')
@@ -171,4 +178,31 @@ function showAddProductForm() {
     document.getElementById('product-form').reset();
     document.getElementById('product-form').removeAttribute('data-edit-id');
     showSection('product-form-section');
+}
+function updateProductRatingInUI(updatedProduct) {
+    
+    const productCard = document.querySelector(`.product-card[data-id="${updatedProduct.id}"]`);
+    if (productCard) {
+        const ratingInputs = productCard.querySelectorAll(`input[name="rating-${updatedProduct.id}"]`);
+        ratingInputs.forEach(input => {
+            if (parseInt(input.value) === updatedProduct.rating) {
+                input.checked = true;
+            } else {
+                input.checked = false;
+            }
+        });
+    }
+}
+
+function filterByPrice() {
+    const filterValue = document.getElementById('price-filter').value;
+    let sortedProducts = [...product];
+
+    if (filterValue === 'low-high') {
+        sortedProducts.sort((a, b) => a.productPrice - b.productPrice);
+    } else if (filterValue === 'high-low') {
+        sortedProducts.sort((a, b) => b.productPrice - a.productPrice);
+    }
+
+    displayProducts(sortedProducts);
 }
