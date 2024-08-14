@@ -174,6 +174,18 @@ function addOrUpdateProduct() {
         .catch(error => console.error('Error adding/updating product:', error));
 }
 
+// Fetch products from the API
+function loadProducts() {
+    fetch(`${apiUrl}/Products`)
+        .then(response => response.json())
+        .then(data => {
+            products = data;
+            displayProducts(products); // Display products when loaded
+        })
+        .catch(error => console.error('Error loading products:', error));
+}
+
+
 function showAddProductForm() {
     document.getElementById('product-form').reset();
     document.getElementById('product-form').removeAttribute('data-edit-id');
